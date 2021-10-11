@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;500&display=swap");
+:root {
+  --black-blue: rgb(17, 18, 19);
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+  background: url("/images/bg-stars.svg");
+  background-color: rgb(23, 22, 31);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.counter {
+  max-width: 700px;
+  margin: 150px auto;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 100px;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+.header {
+  justify-self: center;
+  text-align: center;
+}
+.header h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+.timer {
+  /* justify-self: center;
+  display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 200px));
+  /* width: 100%; */
+  gap: 10px 40px;
+}
+.timer .one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  position: relative;
+}
+.timer .one .box {
+  color: rgb(251, 96, 135);
+  background-color: rgb(43, 44, 67);
+  width: 100%;
+  max-height: 130px;
+  /* padding: 20px 90px; */
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 8px var(--black-blue);
+}
+.timer .one .box p {
+  font-size: 80px;
+  /* width: 100%; */
+}
+@media (max-width: 650px) {
+  .timer .one .box p {
+    font-size: 10vw;
+    /* width: 100%; */
+  }
+  .timer {
+    gap: 5px 20px;
+  }
+  footer {
+    min-height: 176px;
+  }
+}
+.timer .one .text {
+  color: #8486a9;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.one::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(10, 10, 10, 0.144);
+  top: 0;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 7px;
+  background-color: rgba(0, 0, 0, 0.637);
+  /* border-radius: 50%; */
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: 50%;
+  left: 0px;
+  /* -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%; */
+  /* z-index: -1; */
+}
+.box::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 7px;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  top: 50%;
+  right: 0px;
+}
+@media (max-width: 350px) {
+  .box::after {
+    height: 7px;
+    width: 2px;
+  }
+  .box::before {
+    height: 7px;
+    width: 2px;
+  }
+  .box p {
+    font-size: 2rem !important;
+  }
+}
+footer {
+  /* width: 100%; */
+  /* height: 100%; */
+  text-align: center;
+  justify-self: center;
+  max-height: 130px;
+  overflow: hidden;
+  /* background: url("/images/pattern-hills.svg"); */
+}
+footer img {
+  height: 100%;
+}
+.social {
+  justify-self: center;
+  transform: translateY(80px);
+  -webkit-transform: translateY(80px);
+  -moz-transform: translateY(80px);
+  -ms-transform: translateY(80px);
+  -o-transform: translateY(80px);
+}
+.social img {
+  color: #8486a9;
+  margin-left: 30px;
+  font-size: 25px;
+}
